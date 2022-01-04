@@ -62,7 +62,7 @@ contract NFTAuction {
         require(block.timestamp < endAt,"ended");
         require(msg.value > highestBid,"value < highest");
 
-        if(highestBid != address(0)){
+        if(highestBid != 0){
             bids[highestBidder] += highestBid;
         }
 
