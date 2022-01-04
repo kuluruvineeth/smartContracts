@@ -88,7 +88,7 @@ contract NFTAuction {
         ended = true;
         if(highestBidder != address(0)){
             nft.safeTransferFrom(address(this), highestBidder, nftId);
-            seller.transfer(highestBid)
+            seller.transfer(highestBid);
         }else{
             nft.safeTransferFrom(address(this), seller, nftId);
         }
